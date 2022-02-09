@@ -1,0 +1,77 @@
+
+$base-color: rgb(250, 240, 244);
+$primary-color: rgb(234, 214, 223);
+// $base-color: #97bcc5;
+// $primary-color: #668e97;
+
+$text_base-color: #414141;
+$text_primary-color: #fff;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+
+@media (max-width: $screen-md) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+  
+@media (min-width: ($screen-md +1)) {
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
+}
+@media (width: $screen-md) {
+    .mobile {
+        display: block;
+    }
+}
+
+@font-face {
+    font-family: 'MainFont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/main-font.woff2'); /* IE9 Compat Modes */
+    src: local('MainFont'), local('OpenSans'),
+         url('../public/fonts/main-font.woff2') format('woff2'), 
+}
+@font-face {
+    font-family: 'font-1';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/font-1.woff2'); /* IE9 Compat Modes */
+    src: local('font-1'), local('OpenSans'),
+         url('../public/fonts/font-1.woff2') format('woff2'), 
+}
+@font-face {
+    font-family: 'font-2';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/font-2.woff2'); /* IE9 Compat Modes */
+    src: local('font-2'), local('OpenSans'),
+         url('../public/fonts/font-2.woff2') format('woff2'), 
+}
+@font-face {
+    font-family: 'font-3';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/font-3.woff2'); /* IE9 Compat Modes */
+    src: local('font-3'), local('OpenSans'),
+         url('../public/fonts/font-3.woff2') format('woff2'), 
+}
+
+/// ARABIC
+@font-face {
+    font-family: 'main-font-ar';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/main-font-ar.ttf'); /* IE9 Compat Modes */
+    src: local('main-font-ar.ttf'), local('OpenSans'),
+         url('../public/fonts/main-font-ar.ttf') format('woff2'), 
+}

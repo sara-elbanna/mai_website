@@ -1,0 +1,147 @@
+
+@import '../../App.scss';
+.Home{
+    ///// INTRO
+    .Intro{
+      .row{
+        display: flex;
+      }
+      section{
+        width: 50%;
+        height: 600px;
+        overflow: hidden;
+      }
+      section.text{
+        color:$text_base-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $base-color;
+        flex-direction: column;
+        text-align: center;
+        .content{
+            width: 75%;
+        }
+        h1{
+            font-size: 58px;
+            font-family: 'MainFont','main-font-ar';
+            font-weight: 100;
+        }
+        h3{
+            font-family: 'font-2';
+            font-weight: 100;
+            font-size: 16px;
+            width: 80%;
+            margin: auto;
+        }
+      }
+      .personal-img{
+        width: 100%;
+      }
+      .mobile{
+          .column{
+              display: flex;
+              flex-direction: column;
+          }
+          section{
+            width: 100%;
+            height: auto;
+          }
+          section.img{
+              height: 300px;
+          }
+          section.text{
+            h1 {
+                font-size: 36px;
+            }
+            .content {
+                padding-bottom: 40px;
+            }
+          } 
+      }
+    }
+
+    //// SERVICES
+    .Services{
+        background-color: $primary-color;
+        text-align: center;
+        color:$text_primary-color;
+        padding: 30px;
+        position: relative;
+        h2{
+            margin-top: 8px;
+            font-size: 35px;
+            font-family: 'MainFont';
+        }
+        p{
+            font-size: 22px;
+            font-family: 'font-2';
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        img.icon{
+            width: 72px;
+            position: absolute;
+            top: -48px;
+            left: 48%;
+        }
+        @media (max-width: $screen-md) {
+            img.icon{
+                width: 62px;
+                position: absolute;
+                top: -35px;
+                left: 42%;
+            }
+            h2{
+                font-size: 28px;
+            }
+            p{
+                font-size: 18px;
+            }
+          }
+    }
+
+
+    ///// OFFERINGS
+    .Offerings{
+        text-align: center;
+        padding: 30px 150px;
+        color: $text_base-color;
+        h2{
+            font-size: 35px;
+            font-family: 'font-2';
+            margin-top: 0;
+            font-weight: 100;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .OfferingsItem{
+            width: 250px;
+            .img{
+                width: 222px;
+                height: 222px;
+                border-radius: 50%;
+            }
+            .title{
+                font-size: 20px;
+                font-family: 'font-2';
+                // font-weight: 200;
+            }
+            .description{
+                font-size: 15px;
+                font-family: 'font-3';
+                font-weight: bold;
+            }
+            button{
+                width: 142px;
+                height: 40px;
+                color: $text_primary-color;;
+                border: none;
+                background-color: $primary-color;;
+            }
+        }
+    }
+
+  }

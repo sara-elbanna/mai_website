@@ -1,0 +1,146 @@
+@import '../../App.scss';
+
+.Header{
+    padding: 30px 200px 0;
+    font-family: "font-3";
+    height: 100px;
+    .links{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        .language-switch{
+            margin-right: 10px;
+            .lng{
+                cursor: pointer;
+                text-align: right;
+            }
+        }
+    }
+    .logo{
+        position: absolute;
+        left: calc(50% - 100px);
+        width: 200px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 50%;
+        height: 200px;
+        top: 12px;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: rgb(149 157 165 / 10%) 0px 8px 24px;
+        img{
+            margin-top: 37px;
+            height: 120px;
+            width: 120px;
+        }
+    }
+    .menu{
+        color: #000;
+        margin-top: 30px;
+        .menu-item{
+            cursor: pointer;
+            margin-right: 35px;
+            display: inline-block;
+        }
+    }
+    /// whatsapp
+    .whatsapp_float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .whatsapp-icon {
+        margin-top: 16px;
+    }
+
+    
+    
+}
+
+@media (max-width: $screen-md) {
+    .Header {
+        color:$text_base-color;
+        padding: 0;
+        height: 250px;
+        background-color: $base-color;
+        .logo{
+            width: 170px;
+            height: 170px;
+            left: calc(50% - 85px);
+            top: 30px;
+            img{
+                margin-top: 18px;
+            }
+        }
+        .burger-icon{
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            font-size: 38px;
+            color: #8b8b8b;
+            cursor: pointer;
+
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: $base-color;
+            z-index: 100;
+            text-align: center;
+            padding: 30px 0;
+            transition: all 2s;
+
+        }
+        .menu{
+            margin-top: 20px;
+            .menu-item {
+                color:$text_base-color;
+                cursor: pointer;
+                margin-right: 0; 
+                display: block;
+                font-size: 20px;
+                height: 70px;
+                font-weight: bold;
+            }
+        } 
+        .links{
+            justify-content: left;
+            margin-left: 30px;
+        }
+        .close{
+            position: absolute;
+            right: 35px;
+            top: 30px;
+            font-size: 33px;
+            color:#8b8b8b;
+            cursor: pointer;
+            transition: all 2s;
+        }
+        .whatsapp-icon {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    
+        .whatsapp_float {    
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            font-size: 22px;
+        }
+    }
+    
+}
