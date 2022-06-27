@@ -1,0 +1,127 @@
+@import '../../App.scss';
+
+.Signup,
+.CompletePhoneSignup,
+.Login {
+    // background-color: $primary-color;
+    background-image: linear-gradient(0deg, $base-color, #f5ebef);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .form {
+        background-color: #fffdfe;
+        width: 550px;
+        margin: auto;
+        text-align: center;
+        padding: 50px;
+        border-radius: 10px;
+        position: relative;
+        padding-top: 70px;
+
+        .input {
+            margin-bottom: 10px;
+        }
+
+        button,.my-btn {
+            width: 140px;
+            height: 40px;
+            background-color: $button-base-color;
+            color: #fff;
+            border: 2px solid #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .label {
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .logo {
+            position: absolute;
+            left: calc(50% - 70px);
+            width: 150px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            height: 150px;
+            top: -95px;
+            margin: auto;
+            overflow: hidden;
+            box-shadow: rgb(149 157 165 / 10%) 0px 8px 24px;
+            cursor: pointer;
+
+            img {
+                margin-top: 20px;
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+
+    .hint {
+        text-align: left;
+        margin-top: 10px;
+
+        span {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .PhoneInputInput {
+        border: 1px solid #d8d6d6 !important;
+        padding: 3px 10px;
+        border-radius: 2px;
+    }
+
+    .PhoneInputCountry {
+        .PhoneInputCountryIcon {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        .form {
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+
+            button:not(.firebaseui-country-selector), .my-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.Signup {
+    padding-top: 120px;
+    overflow-y: scroll;
+
+    .form {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+
+        .hint {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        .form {
+            background-color: #fffdfe;
+        }
+    }
+}
+
+
+@media (max-width: $screen-md) {
+    .Login {
+        padding-top: 50px;
+    }
+}

@@ -1,6 +1,8 @@
 
 $base-color: rgb(250, 240, 244);
 $primary-color: rgb(234, 214, 223);
+$button-base-color: #c4b4bb;
+$button-primary-color: #e0dddd;
 // $base-color: #97bcc5;
 // $primary-color: #668e97;
 
@@ -10,6 +12,9 @@ $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 
+#root{
+  height: 100%;
+}
 @media (max-width: $screen-md) {
     .desktop {
       display: none;

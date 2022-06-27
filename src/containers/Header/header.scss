@@ -1,9 +1,9 @@
 @import '../../App.scss';
 
 .Header{
-    padding: 30px 200px 0;
+    padding: 20px 200px 0;
     font-family: "font-3";
-    height: 100px;
+    height: 110px;
     .links{
         display: flex;
         justify-content: end;
@@ -37,10 +37,18 @@
     .menu{
         color: #000;
         margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+
         .menu-item{
             cursor: pointer;
             margin-right: 35px;
             display: inline-block;
+        }
+        .right .menu-item{
+            margin-right: 0;
+            margin-left: 35px;
         }
     }
     /// whatsapp
@@ -76,7 +84,7 @@
         .logo{
             width: 170px;
             height: 170px;
-            left: calc(50% - 85px);
+            left: calc(50% - 74px);
             top: 30px;
             img{
                 margin-top: 18px;
@@ -84,7 +92,7 @@
         }
         .burger-icon{
             position: absolute;
-            right: 30px;
+            left: 30px;
             top: 30px;
             font-size: 38px;
             color: #8b8b8b;
@@ -95,39 +103,45 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: auto;
-            background-color: $base-color;
+            width: 75%;
+            height: 100%;
+            background-color: #ddcbd3f5;
             z-index: 100;
-            text-align: center;
-            padding: 30px 0;
+            text-align: left;
+            padding: 10px 20px;
             transition: all 2s;
-
+            color: #fff;
         }
         .menu{
             margin-top: 20px;
+            flex-direction: column;
+            text-align: center;
             .menu-item {
-                color:$text_base-color;
+                color:#fff;
                 cursor: pointer;
                 margin-right: 0; 
                 display: block;
-                font-size: 20px;
-                height: 70px;
+                font-size: 18px;
+                height: 50px;
                 font-weight: bold;
             }
         } 
         .links{
-            justify-content: left;
-            margin-left: 30px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: bold;
         }
         .close{
-            position: absolute;
             right: 35px;
             top: 30px;
             font-size: 33px;
             color:#8b8b8b;
             cursor: pointer;
             transition: all 2s;
+            display: block;
+            text-align: right;
         }
         .whatsapp-icon {
             margin-top: 10px;

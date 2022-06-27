@@ -7,11 +7,22 @@ import { applyMiddleware, createStore } from 'redux';
 import appReducer from './store/reducers';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
-import { loadTranslations, setLocale, syncTranslationWithStore } from 'react-redux-i18n';
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import { PersistGate } from 'redux-persist/integration/react'
 import "./localization/index";
+import 'antd/dist/antd.css'
+import "./firebase.js"
 
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['authInfo']
+}
 
-export let store = createStore(appReducer, applyMiddleware(thunkMiddleware))
+const persistedReducer = persistReducer(persistConfig, appReducer)
+export const store = createStore(persistedReducer, applyMiddleware(thunkMiddleware))
+export const persistor = persistStore(store)
 
 // syncTranslationWithStore(store)
 // store.dispatch(loadTranslations(translationsObject));
@@ -19,15 +30,14 @@ export let store = createStore(appReducer, applyMiddleware(thunkMiddleware))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <React.Suspense fallback="Loading...">
-        <App />
-      </React.Suspense>
+      <PersistGate loading={null} persistor={persistor}>
+        <React.Suspense fallback="Loading...">
+          <App />
+        </React.Suspense>
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

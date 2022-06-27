@@ -5,28 +5,33 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useParams
 } from "react-router-dom";
 import About from './containers/About';
+import Signup from './containers/Authentication/signup';
+import CompletePhoneSignup from './containers/Authentication/completePhoneSignup';
+import React from 'react';
+import Login from './containers/Authentication/login';
+import UserProfile from './containers/User/userProfile';
 
 function App() {
+  // const isLoggedIn = useSelector(redux => redux.authInfo.isLoggedIn)
+
   return (
-    <div>
+    <div style={{height:'100%'}}>
       <Router>
-        <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/about' element={<About />} />
+          <Route exact path='/signup' element={<Signup />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/complete_phone_signup' element={<CompletePhoneSignup />} />
+          <Route exact path='/profile' element={<UserProfile />} />
           {/* <Route path="/blog/:slug">
             <BlogPost />
           </Route> */}
         </Routes>
       </Router>
     </div>
-    // <div className="App">
-    //   
-    //   <Home/>
-    // </div>
   );
 }
 
