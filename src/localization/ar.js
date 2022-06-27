@@ -18,6 +18,8 @@ export const ar = {
     phone_not_registered:"هذا الرقم غير مسجل",
     failed:'خطأ',
     incorrect_password:"كلمة السر غير صحيحه",
-    "My profile":"الصفحه الشخصيه"
+    "My profile":"الصفحه الشخصيه",
+    password:'كلمة السر'
+
 
 }

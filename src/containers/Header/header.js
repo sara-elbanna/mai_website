@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import strings from '../../localization';
 import './header.scss'
-import { setLocale } from 'react-redux-i18n';
-import { store } from '../../index'
 import { useTranslation } from "react-i18next";
 import i18next from "../../localization/index";
 import { useNavigate } from "react-router-dom";
 import { LOGOUT } from '../../store/reducers/authReducer';
 import { Dropdown, Menu, Space } from 'antd';
-import { AppstoreOutlined, DownOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import {  DownOutlined, HomeOutlined, InfoCircleOutlined, LoginOutlined, UserOutlined } from '@ant-design/icons';
 
 function Header() {
   const { t } = useTranslation();
@@ -79,13 +76,13 @@ function Header() {
     };
   }
   const mobileMenu = [
-    isLoggedIn && getItem((firstName + ' ' + lastName), 'userName', <MailOutlined />, [
+    isLoggedIn && getItem((firstName + ' ' + lastName), 'userName', <UserOutlined />, [
       getItem(t('My profile'), 'profile', null),
       getItem(t('logout'), 'logout', null),
     ]),
-    !isLoggedIn && getItem(t("login"), 'login', <AppstoreOutlined />),
-    getItem(t("home"), 'home', <SettingOutlined />,),
-    getItem(t("about"), 'about', <SettingOutlined />,)
+    !isLoggedIn && getItem(t("login"), 'login', <LoginOutlined />),
+    getItem(t("home"), 'home', <HomeOutlined />,),
+    getItem(t("about"), 'about', <InfoCircleOutlined />,)
   ];
   return (
     <div className="Header">
@@ -119,7 +116,7 @@ function Header() {
             <div className='menu-item' onClick={() => routeTo('/')}> <span>{t("home")}</span> </div>
             <div className='menu-item' onClick={() => routeTo('/about')}> <span>{t("about")}</span> </div>
           </div>
-          <div className="right">
+          <div className="right" style={{fontSize:15}}>
             {!isLoggedIn && <div className='menu-item' onClick={() => routeTo('/login')}> <span>{t("login")}</span> </div>}
             {isLoggedIn && <Dropdown overlay={profileMenu} trigger={['click']} placement="bottomRight">
               <a onClick={e => e.preventDefault()} style={{ color: '#000' }}>
@@ -150,21 +147,8 @@ function Header() {
               <span className='lng' onClick={() => onChangeLanguage('ar')}>Ar</span>
             </div>
           </div>
-          {/* <div className="menu">
-            {!isLoggedIn && <div className='menu-item' onClick={() => routeTo('/login')}> <span>{t("login")}</span> </div>}
-            {isLoggedIn && <Dropdown overlay={profileMenu} trigger={['click']} placement="bottomRight">
-              <a onClick={e => e.preventDefault()} className='menu-item'>
-                <Space>
-                  {firstName + ' ' + lastName}
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>}
-            <div className='menu-item' onClick={() => routeTo('/')}> <span>{t("home")}</span> </div>
-            <div className='menu-item' onClick={() => routeTo('/about')}> <span>{t("about")}</span> </div>
-
-          </div> */}
           <Menu
+            className='mobile-menu'
             onClick={onClickOnMobileMenu}
             style={{ backgroundColor: 'transparent', border: "none", color: '#fff', fontSize: 18, fontWeight: 'bold' }}
             defaultSelectedKeys={['1']}

@@ -25,5 +25,6 @@ export const en ={
     'Pre and post natal nutrition':'Pre and post natal nutrition',
     'Nutrition through the lifecycle':'Nutrition through the lifecycle',
     'Nutrition for active lifecycle':'Nutrition for active lifecycle',
-    'PCOS':'PCOS'
+    'PCOS':'PCOS',
+    password:'password'
 }

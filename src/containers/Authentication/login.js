@@ -51,7 +51,7 @@ function Login() {
             <Form className="form">
                 <div className="logo" onClick={()=> navigate('/')}><img src="images/logo.jpg" /></div>
                 <h1>{t("login")}</h1>
-                <h4 className="label">Phone number</h4>
+                <h4 className="label">{t('phone_number')}</h4>
                 <div className="input">
                     {/* <Input autoComplete="off" placeholder={t("phone_number")} onChange={(e) => setPhoneNumber(e.target.value)} /> */}
                     <PhoneInput
@@ -60,10 +60,10 @@ function Login() {
                         value={phoneNumber}
                         onChange={setPhoneNumber} />
                 </div>
-                <h4 className="label">Password</h4>
+                <h4 className="label">{t('password')}</h4>
                 <div className="input"><Input.Password placeholder={t("input_password")} onChange={(e) => setPassword(e.target.value)} /></div>
                 <Button disabled={!password || !phoneNumber} htmlType="submit" loading={loading} onClick={onLogin}>{t("login")}</Button>
-                <h5 className="hint">{t("don't have an account?")} <span onClick={() => navigate('/signup')}>signup</span></h5>
+                <h5 className="hint">{t("don't have an account?")} <span onClick={() => navigate('/signup')}>{t('signup')}</span></h5>
                 {error && <Alert
                     description={t(error)}
                     type="error"

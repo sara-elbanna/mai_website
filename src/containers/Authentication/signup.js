@@ -68,7 +68,7 @@ function Signup() {
                 {/* <h1 style={{ 'textTransform': 'capitalize' }}>{t('signup')}</h1> */}
                 <div id="firebaseui-auth-container"></div>
                 <div id="loader">Loading...</div>
-                <h5 className="hint">{t("already have an account?")} <span onClick={() => navigate('/login')}>login</span></h5>
+                <h5 className="hint">{t("already have an account?")} <span onClick={() => navigate('/login')}>{t('login')}</span></h5>
             </div>
         </div>
     );
