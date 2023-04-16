@@ -26,5 +26,12 @@ export const en ={
     'Nutrition through the lifecycle':'Nutrition through the lifecycle',
     'Nutrition for active lifecycle':'Nutrition for active lifecycle',
     'PCOS':'PCOS',
-    password:'password'
+    password:'password',
+    footer_description:'My mission is to help your balance your hormones after coming off birth control',
+    'keep connected':'Keep connected',
+    'follow us':'FOLLOW US',
+    'call us':'CALL US',
+    'subscribe':'subscribe',
+    'footer_rights':'© Copyright 2023 nutrime・All rights reserved',
+    'Subscribe to our newsletter':'Subscribe to our newsletter'
 }

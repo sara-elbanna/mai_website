@@ -106,7 +106,6 @@
     ///// OFFERINGS
     .Offerings{
         text-align: center;
-        padding: 30px 150px;
         color: $text_base-color;
         h2{
             font-size: 35px;
@@ -114,12 +113,8 @@
             margin-top: 0;
             font-weight: 100;
         }
-        .row{
-            display: flex;
-            justify-content: space-around;
-        }
         .OfferingsItem{
-            width: 250px;
+            margin-bottom: 25px;
             .img{
                 width: 222px;
                 height: 222px;

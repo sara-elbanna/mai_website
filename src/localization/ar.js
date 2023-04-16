@@ -19,7 +19,14 @@ export const ar = {
     failed:'خطأ',
     incorrect_password:"كلمة السر غير صحيحه",
     "My profile":"الصفحه الشخصيه",
-    password:'كلمة السر'
+    password:'كلمة السر',
+    footer_description:'My mission is to help your balance your hormones after coming off birth control',
+    'keep connected':'Keep connected',
+    'follow us':'تابعنا علي',
+    'call us':'اتصل بنا',
+    'subscribe':'اشتراك',
+    'footer_rights':' جميع الحقوق محفوظه ©',
+    'Subscribe to our newsletter':'اشترك في خدمة البريد الالكتروني'
 
 
 }

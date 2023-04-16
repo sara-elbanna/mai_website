@@ -1,0 +1,44 @@
+@import '../../App.scss';
+
+.Footer{
+    background-color:$primary-color;
+    color:$text_primary-color;
+
+    .top{
+        align-items: center;
+        display: flex;
+        height: 350px;
+    }
+    .social-icon{
+        color: #fff;
+        font-size: 20px;
+    }
+    .email-input{
+        height: 50px;
+        background: transparent;
+        border-color: $text_primary-color;
+    }
+    .email-btn{
+        text-transform: uppercase;
+        height: 50px;
+        background-color: $button-base-color;
+        color: $text_primary-color;
+        border: none;
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+        color: $text_primary-color;
+        border-top: 1px solid $text_primary-color;
+        padding-top: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: ($screen-md)) {
+    .Footer .top{
+        height: auto;
+    }
+}

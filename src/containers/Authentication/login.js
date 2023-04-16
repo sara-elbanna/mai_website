@@ -24,7 +24,6 @@ function Login() {
         e.preventDefault()
         setLoading(true)
         getDocs(query(collection(db, "users"), where("phoneNumber", "==", phoneNumber))).then(querySnapshot => {
-            console.log('ffffff', querySnapshot)
             if (querySnapshot.docs[0]) {
                 const userData = querySnapshot.docs[0].data()
                 console.log('dddddd', userData)
@@ -48,6 +47,10 @@ function Login() {
     }
     return (
         <div className="Login">
+            <div className="back" onClick={()=>navigate('/')}>
+                <i style={{cursor:'pointer'}} className="fa-solid fa-arrow-left"></i>
+                <p style={{marginLeft:10, cursor:'pointer'}}>Home</p>
+            </div>
             <Form className="form">
                 <div className="logo" onClick={()=> navigate('/')}><img src="images/logo.jpg" /></div>
                 <h1>{t("login")}</h1>

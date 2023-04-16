@@ -12,9 +12,71 @@ $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 
-#root{
+#root, html, body{
   height: 100%;
 }
+
+// Container
+.container{
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  padding:20px;
+}
+.container.underHeader{
+  padding-top: 100px;
+}
+@media (min-width: 476px){
+  .container{
+    padding:15px;
+  }
+}
+@media (min-width: 768px){
+  .container{
+    padding:15px;
+  }
+}
+@media (min-width: 992px){
+  .container{
+    padding:15px;
+  }
+}
+@media (min-width: 1200px){
+  .container{
+    padding:15px;
+  }
+}
+@media (min-width: 476px){
+  .container{
+    width:100%
+  }
+}
+@media (min-width: 768px){
+  .container{
+    width:720px;
+    max-width:100%
+  }
+}
+@media (min-width: 992px){
+  .container{
+    width:960px;
+    max-width:100%
+  }
+}
+@media (min-width: 1200px){
+  .container{
+    width:1140px;
+    max-width:100%
+  }
+}
+@media (min-width: 1400px){
+  .container{
+    width:1340px;
+    max-width:100%
+  }
+}
+
+
 @media (max-width: $screen-md) {
     .desktop {
       display: none;

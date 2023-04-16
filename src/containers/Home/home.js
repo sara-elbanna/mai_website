@@ -3,6 +3,7 @@ import './home.scss';
 import Services from "./services";
 import Offerings from "./offerings";
 import Header from "../Header/header";
+import Footer from "../Footer/footer";
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
         <Intro/>
         <Services/>
         <Offerings/>
+        <Footer/>
       </div>
     );
   }

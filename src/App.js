@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import About from './containers/About';
+import About from './containers/About/about';
 import Signup from './containers/Authentication/signup';
 import CompletePhoneSignup from './containers/Authentication/completePhoneSignup';
 import React from 'react';

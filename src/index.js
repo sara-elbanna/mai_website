@@ -11,7 +11,6 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
 import "./localization/index";
-import 'antd/dist/antd.css'
 import "./firebase.js"
 
 const persistConfig = {
