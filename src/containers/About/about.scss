@@ -28,4 +28,10 @@
             }
         }
     }
+    
+}
+@media (max-width: $screen-md) {
+    .about-page .About .content .description-box{
+        width: 80%;
+    }
 }

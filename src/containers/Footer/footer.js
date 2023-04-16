@@ -17,10 +17,10 @@ function Footer() {
                     <Col md={24} xs={24} lg={8}>
                         <h3>{t('Subscribe to our newsletter')}</h3>
                         <Row gutter={8}>
-                            <Col lg={14}>
+                            <Col lg={14} xs={16}>
                                 <Input name="email" type="email" className="email-input" />
                             </Col>
-                            <Col lg={6}>
+                            <Col lg={6} xs={4}>
                                 <Button className="email-btn">{t('subscribe')}</Button>
                             </Col>
                         </Row>

@@ -4,6 +4,7 @@ import Services from "./services";
 import Offerings from "./offerings";
 import Header from "../Header/header";
 import Footer from "../Footer/footer";
+import ContactSection from "./contactSection";
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
         <Intro/>
         <Services/>
         <Offerings/>
+        <ContactSection/>
         <Footer/>
       </div>
     );

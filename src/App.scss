@@ -23,9 +23,7 @@ $screen-lg: 992px;
   margin-right:auto;
   padding:20px;
 }
-.container.underHeader{
-  padding-top: 100px;
-}
+
 @media (min-width: 476px){
   .container{
     padding:15px;
@@ -44,6 +42,9 @@ $screen-lg: 992px;
 @media (min-width: 1200px){
   .container{
     padding:15px;
+  }
+  .container.underHeader{
+    padding-top: 100px;
   }
 }
 @media (min-width: 476px){
@@ -141,4 +142,13 @@ $screen-lg: 992px;
     src: url('../public/fonts/main-font-ar.ttf'); /* IE9 Compat Modes */
     src: local('main-font-ar.ttf'), local('OpenSans'),
          url('../public/fonts/main-font-ar.ttf') format('woff2'), 
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-btn-default:not(:disabled):active {
+  color: unset;
+  border-color: unset;
+}
+:where(.css-dev-only-do-not-override-htwhyh).ant-btn-default:not(:disabled):hover {
+  color: unset;
+  border-color: unset;
 }

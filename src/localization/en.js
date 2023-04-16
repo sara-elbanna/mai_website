@@ -31,7 +31,8 @@ export const en ={
     'keep connected':'Keep connected',
     'follow us':'FOLLOW US',
     'call us':'CALL US',
-    'subscribe':'subscribe',
+    'subscribe':'Subscribe',
     'footer_rights':'© Copyright 2023 nutrime・All rights reserved',
-    'Subscribe to our newsletter':'Subscribe to our newsletter'
+    'Subscribe to our newsletter':'Subscribe to our newsletter',
+    'Claim Your FREE Post Pill Guide':'Claim Your FREE Post Pill Guide'
 }

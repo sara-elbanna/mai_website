@@ -3,7 +3,11 @@
 .Footer{
     background-color:$primary-color;
     color:$text_primary-color;
+    font-family: 'font-2';
+    h3,p{
+    font-family: 'font-2';
 
+    }
     .top{
         align-items: center;
         display: flex;
@@ -31,7 +35,7 @@
         justify-content: center;
         padding-bottom: 40px;
         color: $text_primary-color;
-        border-top: 1px solid $text_primary-color;
+        border-top: 1px solid #ffffff5e;
         padding-top: 10px;
         font-size: 14px;
     }
